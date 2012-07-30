@@ -1,0 +1,4 @@
+<!ENTITY mixedcontentmonitor.hello.label            "Hello World!">
+<!ENTITY sidebar.title "MixedContentMonitorPanel">
+<!ENTITY mixedcontentmonitor.helloMenu.accesskey    "l">
+<!ENTITY mixedcontentmonitor.helloItem.accesskey    "H">

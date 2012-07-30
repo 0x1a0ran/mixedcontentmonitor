@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://mixedcontentmonitor/skin/default.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://mixedcontentmonitor/locale/MixedContentMonitor.dtd">
+
+<overlay id="mixedcontentmonitor-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script>
+	var windowOpened = null;
+	function toggleWindow(button) {
+	    if (windowOpened == null) {
+			windowOpened = window.openDialog(
+				"chrome://mixedcontentmonitor/content/report.xul",
+				"reportWindow",
+				"chrome,resizable=true,width=500,height=400");
+			button.image =
+			"chrome://mixedcontentmonitor/skin/protected.jpg";
+		} else {
+			windowOpened.close();
+			windowOpened = null;
+			button.image =
+			"chrome://mixedcontentmonitor/skin/unprotected.jpg";
+		}
+	}
+  </script>
+
+  <toolbar id="addon-bar">
+	<toolbarbutton
+	  image="chrome://mixedcontentmonitor/skin/unprotected.jpg" 
+	  oncommand="toggleWindow(this)"/>
+  </toolbar>
+
+</overlay>

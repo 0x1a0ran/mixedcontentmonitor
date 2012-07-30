@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="chrome://mixedcontentmonitor/skin/default.css" type="text/css"
+?>
+<!DOCTYPE window SYSTEM
+"chrome://mixedcontentmonitor/locale/MixedContentMonitor.dtd">
+
+<window id="report" flex="1" title="&sidebar.title;" style="width:500px;height=400px"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+>
+
+  <script type="application/x-javascript"
+    src="chrome://mixedcontentmonitor/content/MixedContentMonitor.js" />
+  <script type="application/x-javascript"
+    src="chrome://mixedcontentmonitor/content/notify.js" />
+
+   <vbox flex="1" id="vulnlist" style="overflow:auto">
+     <label id="atest" value="&sidebar.title;" />
+   </vbox>
+</window>
